@@ -40,4 +40,8 @@
         x-codes = <INPUT_REL_X>;
 		y-codes = <INPUT_REL_Y>;
 		xy-to-scroll-enabled;
+    scroller {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
 };
