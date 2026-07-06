@@ -1,8 +1,19 @@
 #include "../lism-input-processors.dtsi"
+#include <input/processors.dtsi>
 / {
     chosen {
         zmk,kscan = &kscan1;
     };
+};
+
+&zip_temp_layer {
+    excluded-positions = <
+        16 // J
+        17 // K
+        18 // L
+        34 // SWAPPER
+        35 // Shift + Tab
+    >;
 };
 
 &spi0 {
@@ -32,7 +43,12 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor_central>;
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor_central>,
+		<&zip_temp_layer 4 10000>;
+    scroller {
+        layers = <5>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
 };
 
 &scroll_runtime_input_processor {
