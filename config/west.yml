@@ -23,7 +23,7 @@ manifest:
       revision: v0.3
     - name: zmk-smart-toggle
       remote: caksoylar
-      reviaion: v0.3-branch
+      revision: v0.3-branch
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
       revision: main
