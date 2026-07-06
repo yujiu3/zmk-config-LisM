@@ -17,6 +17,7 @@
     };
 };
 
+/*
 &zip_temp_layer {
     excluded-positions = <
 				16 //j
@@ -26,7 +27,7 @@
 				35 //Shift + tab
     >;
 };
-
+*/
 // ペリフェラル（split経由）のリスナーを有効化
 &peripheral_listener {
     status = "okay";
@@ -42,10 +43,9 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) >,
-        <&mouse_runtime_input_processor_central>,
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor_central>,
 		// オートマウスレイヤー 5
-				<&zip_temp_layer 5 10000>;
+		<&zip_temp_layer 5 10000>;
 };
 
 &scroll_runtime_input_processor {
@@ -53,8 +53,8 @@
 		y-codes = <INPUT_REL_Y>;
 		xy-to-scroll-enabled;
 		// スクロールレイヤー 6
-    scroller {
-        layers = <6>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
+	    scroller {
+    	    layers = <6>;
+        	input-processors = <&zip_xy_to_scroll_mapper>;
+    	};
 };
