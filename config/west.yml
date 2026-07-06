@@ -19,11 +19,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3
-####追加ここから
     - name: zmk-smart-toggle
       remote: caksoylar
       revision: v0.3-branch
-####追加ここまで
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
       revision: main
