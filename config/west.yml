@@ -27,7 +27,6 @@ manifest:
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
       revision: main
-
     - name: zmk-module-ble-management
       remote: cormoran
       revision: zmk-v0.3.0.0
