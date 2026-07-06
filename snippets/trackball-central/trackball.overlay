@@ -17,6 +17,16 @@
     };
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+				16 //j
+				17 //k
+        18 //l
+        34 //swapper
+        35 //Shift + tab
+    >;
+};
+
 // ペリフェラル（split経由）のリスナーを有効化
 &peripheral_listener {
     status = "okay";
