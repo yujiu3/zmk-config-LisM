@@ -161,8 +161,7 @@
 &trans &trans &trans &trans &trans &trans
             >;
 
-            // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-            sensor-bindings = <&inc_dec_scroll MOUSE_SCROLL_UP MOUSE_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         SYMBOL {
