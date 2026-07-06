@@ -21,9 +21,9 @@
     excluded-positions = <
 				16 //j
 				17 //k
-        18 //l
-        34 //swapper
-        35 //Shift + tab
+				18 //l
+				34 //swapper
+				35 //Shift + tab
     >;
 };
 
@@ -42,8 +42,9 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
-         &mouse_runtime_input_processor_central>,
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) >,
+        <&mouse_runtime_input_processor_central>,
+		// オートマウスレイヤー 5
 				<&zip_temp_layer 5 10000>;
 };
 
@@ -51,8 +52,9 @@
         x-codes = <INPUT_REL_X>;
 		y-codes = <INPUT_REL_Y>;
 		xy-to-scroll-enabled;
+		// スクロールレイヤー 6
     scroller {
-        layers = <5>;
+        layers = <6>;
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
