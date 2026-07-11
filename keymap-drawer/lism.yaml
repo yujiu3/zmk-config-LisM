@@ -35,7 +35,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
   - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-space$$', h: '4'}
+  - $$mdi:keyboard-space$$
   - {t: '$$mdi:apple-keyboard-caps$$', h: '6'}
   - {t: '$$mdi:backspace$$', h: '5'}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
@@ -232,7 +232,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
   - {t: '&swapper', type: held}
-  - $$mdi:keyboard-tab-reverse$$
+  - {t: '$$mdi:keyboard-tab-reverse$$', type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: ▽, type: trans}
@@ -309,12 +309,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:progress-download$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:progress-download$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
@@ -330,8 +330,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:progress-download$$
+  - $$mdi:progress-download$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -344,8 +344,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
+- p: [9, 19]
+  k: $$mdi:backspace-reverse-outline$$
 - p: [34, 35]
-  k: {t: Ctl+PgUp, h: '5'}
+  k: {t: Ctl+PgUp, h: '4'}
 - p: [36, 37]
   k: Ctl+PgDn
 - p: [16, 17]
