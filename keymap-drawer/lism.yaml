@@ -35,7 +35,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
   - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-space$$', h: '4'}
   - {t: '$$mdi:apple-keyboard-caps$$', h: '6'}
   - {t: '$$mdi:backspace$$', h: '5'}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
@@ -232,7 +232,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
   - {t: '&swapper', type: held}
-  - {t: '$$mdi:keyboard-tab-reverse$$', type: held}
+  - $$mdi:keyboard-tab-reverse$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: ▽, type: trans}
