@@ -218,9 +218,9 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - '-'
   - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-  - X
-  - C
-  - V
+  - {t: X, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - N
   - $$mdi:arrow-left-bold$$
@@ -231,7 +231,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
   - $$mdi:apple-keyboard-option$$
   - {t: ▽, type: trans}
-  - {t: '&swapper', type: held}
+  - {type: held}
   - $$mdi:keyboard-tab-reverse$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
@@ -356,7 +356,7 @@ combos:
   k: $$mdi:mouse-right-click-outline$$
 - p: [16, 18]
   k: $$mdi:mouse-scroll-wheel$$
-- p: [0, 10]
+- p: [11, 12]
   k: $$mdi:keyboard-esc$$
-- p: [10, 20]
+- p: [12, 13]
   k: $$mdi:keyboard-tab$$
