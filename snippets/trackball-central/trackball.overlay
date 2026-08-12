@@ -4,6 +4,7 @@
     };
 };
 
+/**
 // 追加ここから
 &zip_temp_layer {
     excluded-positions = <
@@ -15,6 +16,7 @@
     >;
 };
 // 追加ここまで
+*****/
 
 &spi0 {
     status = "okay";
@@ -38,11 +40,13 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-//        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+/*****
 //追加
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
 		<&zip_temp_layer 4 10000>;
 //追加ここまで
+*****/
     scroller {
         layers = <5>;  // 2->5
         input-processors = 
