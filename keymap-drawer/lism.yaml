@@ -34,7 +34,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
   - $$mdi:apple-keyboard-option$$
-  - {t: ▽, type: trans}
+  - $$mdi:pan-up$$
   - {t: '$$mdi:keyboard-space$$', h: '4'}
   - {t: '$$mdi:apple-keyboard-caps$$', h: '6'}
   - {t: '$$mdi:backspace$$', h: '5'}
@@ -43,9 +43,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-esc$$', h: +}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:pan-left$$
+  - $$mdi:pan-down$$
+  - $$mdi:pan-right$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -278,8 +278,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-control$$
-  - {t: ▽, type: trans}
   - Sft+Gui+S
+  - $$mdi:arrow-up-bold$$
   - Gui+D
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - Ctl+PgUp
@@ -288,9 +288,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
