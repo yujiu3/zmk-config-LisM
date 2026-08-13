@@ -619,9 +619,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(196, 196)" class="key keypos-33">
 <rect rx="6" ry="6" x="-20" y="-20" width="41" height="41" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Ctl+</tspan><tspan x="0" dy="1.2em">PgUp</tspan>
-</text>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-up-bold"/>
 </g>
 <g transform="translate(252, 196)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -633,8 +631,9 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(308, 196)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Ctl+</tspan><tspan x="0" dy="1.2em">PgDn</tspan>
+<tspan x="0" dy="-0.9em">Ctl+</tspan><tspan x="0" dy="1.2em">PgUp</tspan>
 </text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 88%">Ctl+PgDn</tspan></text>
 </g>
 <g transform="translate(420, 196)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -661,17 +660,17 @@ path.combo { stroke: #7f7f7f; }
 <tspan x="0" dy="-0.6em">Sft+</tspan><tspan x="0" dy="1.2em">0x89</tspan>
 </text>
 </g>
-<g transform="translate(146, 238)" class="key trans keypos-42">
-<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(146, 238)" class="key keypos-42">
+<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
+<use href="#mdi:arrow-left-bold" xlink:href="#mdi:arrow-left-bold" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-left-bold"/>
 </g>
-<g transform="translate(196, 238)" class="key trans keypos-43">
-<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(196, 238)" class="key keypos-43">
+<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
+<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-down-bold"/>
 </g>
-<g transform="translate(246, 238)" class="key trans keypos-44">
-<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(246, 238)" class="key keypos-44">
+<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
+<use href="#mdi:arrow-right-bold" xlink:href="#mdi:arrow-right-bold" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-right-bold"/>
 </g>
 <g transform="translate(482, 238)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
