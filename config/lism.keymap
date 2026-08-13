@@ -177,8 +177,8 @@
 &mt ESCAPE Q      &kp W             &lt 5 E       &kp R           &lt 6 T                                     &kp Y        &kp U            &lt 5 I          &kp O                   &lt 6 P
 &kp A             &kp S             &kp D         &kp F           &kp G                                       &kp H        &kp J            &kp K            &kp L                   &kp MINUS
 &mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &mt LCTRL C   &mt LEFT_ALT V  &kp B                                       &kp N        &mt RIGHT_ALT M  &mt RCTRL COMMA  &mt RIGHT_SHIFT PERIOD  &mt JP_YEN SLASH
-&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &trans          &lt 4 SPACE  &lt 2 CAPS      &lt 5 BACKSPACE  &lt 1 ENTER  &trans           &trans           &trans                  &mt JP_TILDE ESCAPE
-&trans &trans &trans &trans &trans &trans
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &msc SCRL_UP    &lt 4 SPACE  &lt 2 CAPS      &lt 5 BACKSPACE  &lt 1 ENTER  &trans           &trans           &trans                  &mt JP_TILDE ESCAPE
+                                &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_RIGHT              &trans &trans &trans
             >;
 
             // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -279,8 +279,8 @@
 &trans     &trans              &trans              &trans               &trans                                        &trans            &trans          &trans          &trans           &trans
 &trans     &trans              &kp LG(UP_ARROW)    &trans               &trans                                        &trans            &trans          &kp UP_ARROW    &trans           &trans
 &trans     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans                                        &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
-&kp LCTRL  &kp LCTRL           &trans              &kp LS(LG(S))        &kp LG(D)  &kp LA(LC(DEL))   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN) &trans          &trans          &trans           &trans
-&trans &trans &trans &trans &trans &trans
+&kp LCTRL  &kp LCTRL           &kp LS(LG(S))       &kp UP_ARROW         &kp LG(D)  &kp LA(LC(DEL))   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN) &trans          &trans          &trans           &trans
+                                  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW                   &trans &trans &trans
             >;
         };
 
