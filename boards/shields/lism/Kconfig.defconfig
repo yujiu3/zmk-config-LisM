@@ -25,6 +25,6 @@ if SHIELD_LISM_L || SHIELD_LISM_R
     config I2C
         default y
 # 追加
-    confg PINCTRL
+    config PINCTRL
         default y
 endif
