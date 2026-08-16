@@ -70,7 +70,8 @@
 // セントラルのリスナーを有効化し、deviceを紐付け
 &central_listener {
     status = "okay";
-    device = <&trackball_central>;
+//    device = <&trackball_central>;
+    device = <&trackball>;
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 /*****
