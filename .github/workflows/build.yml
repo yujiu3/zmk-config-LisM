@@ -2,7 +2,7 @@ name: Build ZMK firmware
 on:
   workflow_dispatch:
   push:
-    branches: [ yu3 ]
+    branches: [ yu3-pat9125 ]
     paths:
       - '.github/workflows/build.yml'
       - 'boards/**'
