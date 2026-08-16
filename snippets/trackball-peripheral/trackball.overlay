@@ -3,7 +3,37 @@
         zmk,kscan = &kscan1;
     };
 };
+// 追加ここから
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
+#include <input/processors/report_rate_limit.dtsi>
 
+&i2c1 {
+	status = "okay";
+	compatible = "nordic,nrf-twim";
+	pinctrl-0 = <&i2c1_default>;
+	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-names = "default", "sleep";
+
+	trackball: trackball@79 {
+		status = "okay";
+		compatible = "pixart,pat9125";
+		reg = <0x79>; // HIGH:0x73, LOW:0x75, NC:0x79
+		motion-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		res-x-cpi = <300>;
+		res-y-cpi = <300>;
+		report-interval-ms = <10>;
+		zephyr,axis-x = <INPUT_REL_X>;
+		zephyr,axis-y = <INPUT_REL_Y>;
+		// invert-x;
+		invert-y;
+		sleep1-enable;
+		sleep2-enable;
+	};
+};
+
+// 追加ここまで
+/*************
 &spi0 {
     status = "okay";
 
@@ -15,6 +45,7 @@
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
+*************/
 
 // Overrides for the input-split child node
 &trackball_split {
