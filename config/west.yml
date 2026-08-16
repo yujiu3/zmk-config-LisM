@@ -8,6 +8,12 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: 4mplelab
       url-base: https://github.com/4mplelab
+    # START #####
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: BP
+      url-base: https://github.com/taichan1113
+    # END #####
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -25,5 +31,13 @@ manifest:
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
       revision: main
+    # START #####
+    - name: zmk-input-processor-report-rate-limit
+      remote: badjeff
+      revision: main
+    - name: zmk-driver-pat9125
+      remote: BP
+      revision: main
+    # END #####
   self:
     path: config
