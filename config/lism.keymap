@@ -162,7 +162,8 @@
             >;
 
             // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
-						sensor-bindings = <&encoder_msc_down_up>;
+			// sensor-bindings = <&encoder_msc_down_up>;
+           sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
 
         };
 
