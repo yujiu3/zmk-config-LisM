@@ -6,6 +6,46 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/mouse.h>
 
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+
+/******************************************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│   0  │   1  │   2  │   3  │   4  │      │    │      │   5  │   6  │   7  │   8  │   9  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│  10  │  11  │  12  │  13  │  14  │      │    │      │  15  │  16  │  17  │  18  │  19  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│  20  │  21  │  22  │  23  │  24  │      │    │      │  25  │  26  │  27  │  28  │  29  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│  30  │  31  │  32  │  33  │  34  │  35  │    │  36  │  37  │  38  │  39  │  40  │  41  │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │  42  │  43  │  44  │                  │  45  │  46  │  47  │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+******************************************/
+
 &mt {
     tapping-term-ms = <300>;
     flavor = "balanced";
@@ -17,6 +57,57 @@
 
 
 / {
+// コンボ追加
+    combos {
+        compatible = "zmk,combos";
+
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <9 19>;
+            bindings = <&kp DELETE>;
+        };
+
+        combo_lc_pgup {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&lt 4 LC(PAGE_UP)>;
+        };
+
+        combo_lc_pgdn {
+            timeout-ms = <50>;
+            key-positions = <36 37>;
+            bindings = <&kp LC(PAGE_DOWN)>;
+        };
+
+        combo_lclk {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&mkp LCLK>;
+        };
+
+        combo_rclk {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&mkp RCLK>;
+        };
+
+        combo_mclk {
+            bindings = <&mkp MCLK>;
+            key-positions = <16 18>;
+        };
+
+        combo_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <11 12>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+        };
+    };
+// 追加ここまで
+
     macros {
         emoji: emoji_macro {
             compatible = "zmk,behavior-macro";
@@ -44,6 +135,161 @@
         };
     };
 
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+/***************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│   q  │   w  │   e  │   r  │   t  │      │    │      │   y  │   u  │   i  │   o  │   p  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│   a  │   s  │   d  │   f  │   g  │      │    │      │   h  │   j  │   k  │   l  │   -  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│   z  │   x  │   c  │   v  │   b  │      │    │      │   n  │   m  │   ,  │   .  │   /  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│ ctrl │  win │  alt │      │  sp  │ cpas │    │  bs  │  ent │      │      │      │  esc │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │      │      │      │                  │      │      │      │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+***************/
+            bindings = <
+&mt ESCAPE Q      &kp W             &lt 5 E       &kp R           &lt 6 T                                     &kp Y        &kp U            &lt 5 I          &kp O                   &lt 6 P
+&kp A             &kp S             &kp D         &kp F           &kp G                                       &kp H        &kp J            &kp K            &kp L                   &kp MINUS
+&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &mt LCTRL C   &mt LEFT_ALT V  &kp B                                       &kp N        &mt RIGHT_ALT M  &mt RCTRL COMMA  &mt RIGHT_SHIFT PERIOD  &mt JP_YEN SLASH
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &msc SCRL_UP    &lt 4 SPACE  &lt 2 CAPS      &lt 5 BACKSPACE  &lt 1 ENTER  &trans           &trans           &trans                  &mt JP_TILDE ESCAPE
+                                &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_RIGHT              &trans &trans &trans
+            >;
+
+            // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+						sensor-bindings = <&encoder_msc_down_up>;
+
+        };
+
+        SYMBOL {
+/***************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│  f1  │  f2  │  f3  │  f4  │  f5  │      │    │      │  f6  │  f7  │  f8  │  f9  │  f10 │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│   !  │   @  │   #  │   $  │   %  │      │    │      │   ^  │   &  │   *  │   (  │   )  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│  c+z │  c+x │  c+c │  c+v │  c+b │      │    │      │   _  │   -  │   +  │   :  │   '  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│ ctrl │  win │  alt │ c+pu │ c+hm │ c+pd │    │      │      │      │      │      │   |  │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │      │      │      │                  │      │      │      │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+***************/
+            bindings = <
+&kp F1                   &kp F2        &kp F3        &kp LA(F4)             &kp F5                                                       &kp F6             &kp F7            &kp F8           &kp F9                   &kp F10
+&kp EXCLAMATION          &kp JP_AT     &kp HASH      &kp DOLLAR             &kp PERCENT                                                  &kp JP_CARET       &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp JP_LPAREN            &kp JP_RPAREN
+&mt LEFT_SHIFT LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(V)              &kp LC(B)                                                    &kp JP_UNDERSCORE  &kp MINUS         &kp JP_PLUS      &mt SEMICOLON JP_COLON   &kp JP_QUOTE
+&kp LCTRL                &kp LEFT_WIN  &kp LEFT_ALT  &kp LC(LS(UP_ARROW))   &mt LC(END) LC(HOME)    &mt LC(PAGE_DOWN) LC(PAGE_UP)  &trans  &trans             &trans            &trans           &trans                   &kp JP_PIPE
+                              &kp LC(LS(LEFT_ARROW)) &kp LC(LS(DOWN_ARROW)) &kp LC(LS(RIGHT_ARROW))                                &trans &trans &trans
+            >;
+        };
+
+        NUM {
+/***************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│      │      │      │      │   [  │      │    │      │   ]  │   7  │   8  │   9  │   =  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│      │      │      │      │   (  │      │    │      │   )  │   4  │   5  │   6  │   *  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│      │      │      │      │   ~  │      │    │      │   0  │   1  │   2  │   3  │   /  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│      │      │      │      │      │      │    │   -  │   +  │      │      │      │   ,  │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │      │      │      │                  │      │      │      │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+***************/
+            bindings = <
+&trans  &trans  &trans   &trans   &kp JP_LBRACKET              &kp JP_RBRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &mt JP_COLON JP_EQUAL
+&trans  &trans  &trans   &trans   &kp JP_LPAREN                &kp JP_RPAREN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_ASTERISK
+&trans  &trans  &trans   &trans   &kp JP_TILDE                 &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH
+&trans  &trans  &trans   &trans   &trans   &trans      &kp MINUS  &kp JP_PLUS   &trans        &trans        &trans        &mt PERIOD COMMA
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        ARROW {
+
+            bindings = <
+&kp ESCAPE      &mkp MB4                &kp UP_ARROW    &mkp MB5                 &trans                       &kp LG(LEFT_ARROW)          &kp LA(LEFT_ARROW)      &kp UP_ARROW    &kp RA(RIGHT_ARROW)      &kp RG(RIGHT_ARROW)
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END                      &kp LC(LS(TAB))             &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp RC(TAB)
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans                       &kp LA(LG(LC(LEFT_ARROW)))  &kp LA(LG(LEFT_ARROW))  &kp LA(LG(F))   &kp RG(RA(RIGHT_ARROW))  &kp RA(RC(RG(RIGHT_ARROW)))
+&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &kp BACKSPACE               &trans                  &trans          &trans                   &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+
+            // sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+
+        MOUSE {
+/***************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│   q  │   w  │   e  │   r  │   t  │      │    │      │   y  │   u  │  l6  │   o  │   p  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│   a  │   s  │   d  │   f  │   g  │      │    │      │   h  │  mb1 │   ↑  │  mb2 │   -  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│   z  │   x  │   c  │   v  │   b  │      │    │      │   n  │   ←  │   ↓  │   →  │   /  │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│ ctrl │  win │  alt │      │      │      │    │  bs  │  ent │      │      │      │  esc │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │      │      │      │                  │      │      │      │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+***************/
+            bindings = <
+&mt ESCAPE Q      &kp W             &lt 5 E       &kp R               &lt 6 T                                   &kp Y       &kp U            &lt 5 I         &kp O            &kp DELETE
+&kp A             &kp S             &mt LCTRL D   &kp F               &kp G                                     &kp H       &mkp MB1         &kp UP_ARROW    &mkp MB2         &kp MINUS
+&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &mt LCTRL C   &mt LEFT_ALT V      &kp B                                     &kp N       &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &mt JP_YEN SLASH
+&kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &trans              &trans    &kp LS(TAB)      &kp BACKSPACE  &lt 1 ENTER &trans           &trans          &trans           &mt JP_TILDE ESCAPE
+&trans &trans &trans &trans &trans &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp TAB LS(TAB)>;
+
+        };
+
+        SCROLL {
+            bindings = <
+&trans     &trans              &trans              &trans               &trans                                        &trans            &trans          &trans          &trans           &trans
+&trans     &trans              &kp LG(UP_ARROW)    &trans               &trans                                        &trans            &trans          &kp UP_ARROW    &trans           &trans
+&trans     &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans                                        &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
+&kp LCTRL  &kp LCTRL           &kp LS(LG(S))       &kp UP_ARROW         &kp LG(D)  &kp LA(LC(DEL))   &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN) &trans          &trans          &trans           &trans
+                                  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW                   &trans &trans &trans
+            >;
+        };
+
+        CONFIG {
+/***************
+左手側                                                    右手側
+┌──────┬──────┬──────┬──────┬──────┬──────┐    ┌──────┬──────┬──────┬──────┬──────┬──────┐
+│cl_all│  clr │      │      │      │      │    │      │      │      │      │      │      │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│      │      │      │      │      │      │    │      │      │      │      │      │      │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│  bt0 │  bt1 │  bt2 │  bt3 │  bt4 │      │    │      │      │      │      │      │      │
+├──────┼──────┼──────┼──────┼──────┼──────┤    ├──────┼──────┼──────┼──────┼──────┼──────┤
+│      │      │      │      │      │ boot │    │ boot │      │      │      │      │      │
+└──────┴──────┼──────┬──────┬──────┼──────┘    └──────┼──────┬──────┬──────┼──────┴──────┘
+              │      │      │      │                  │      │      │      │
+              └──────┴──────┴──────┘                  └──────┴──────┴──────┘
+***************/
+            bindings = <
+&bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans                                      &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans                                      &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &bootloader      &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+    };
+
+/********オリジナルのkeymapセクション
     keymap {
         compatible = "zmk,keymap";
 
@@ -140,5 +386,5 @@
             >;
         };
     };
-
+********/
 };
