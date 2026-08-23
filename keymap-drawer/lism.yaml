@@ -1,85 +1,251 @@
 layout: {zmk_keyboard: lism}
 layers:
-  Default Layer:
-  - Q
+  default:
+  - {t: Q, h: '$$mdi:keyboard-esc$$'}
   - W
-  - E
+  - {t: E, h: SCROLL}
   - R
-  - T
+  - {t: T, h: CONFIG}
   - Y
   - U
-  - I
+  - {t: I, h: SCROLL}
   - O
-  - P
+  - {t: P, h: CONFIG}
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: G, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: Mark Layer}
-  - Z
-  - X
-  - C
-  - V
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - '-'
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - B
   - N
-  - M
-  - ','
-  - .
-  - /
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Device Layer}
-  - {t: Mouse Layer, h: toggle}
-  - {t: '$$mdi:keyboard-tab$$', h: Mouse Layer}
+  - {t: M, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ',', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: PERIOD, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: /, h: '0x89'}
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:pan-up$$
-  - {t: '$$mdi:keyboard-space$$', h: Number Layer}
-  - {t: '$$mdi:keyboard-esc$$', h: Mark Layer}
-  - {t: '$$mdi:backspace$$', h: Mark Layer}
-  - {t: '$$mdi:keyboard-return$$', h: Number Layer}
-  - $$mdi:pan-up$$
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: NUM}
+  - {t: '$$mdi:backspace$$', h: SCROLL}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:keyboard-esc$$', h: +}
+  - $$mdi:pan-left$$
+  - $$mdi:pan-down$$
+  - $$mdi:pan-right$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SYMBOL:
+  - F1
+  - F2
+  - F3
+  - Alt+F4
+  - F5
+  - F6
   - F7
+  - F8
+  - F9
   - F10
-  - {t: F12, h: Device Layer}
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
-  Mouse Layer:
+  - '!'
+  - '['
+  - '#'
+  - $
+  - '%'
+  - '='
+  - ^
+  - '"'
+  - '*'
+  - (
+  - {t: Ctl+Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+B
+  - Sft+0x87
+  - '-'
+  - ':'
+  - {t: '''', h: ;}
+  - '&'
+  - $$mdi:apple-keyboard-control$$
+  - LEFT WIN
+  - $$mdi:apple-keyboard-option$$
+  - Ctl+Sft+$$mdi:arrow-up-bold$$
+  - {t: Ctl+HOME, h: Ctl+END}
+  - {t: Ctl+PgUp, h: Ctl+PgDn}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+0x89
+  - Ctl+Sft+$$mdi:arrow-left-bold$$
+  - Ctl+Sft+$$mdi:arrow-down-bold$$
+  - Ctl+Sft+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NUM:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ']'
+  - \
+  - '7'
+  - '8'
+  - '9'
+  - {t: _, h: ''''}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '*'
+  - (
+  - '4'
+  - '5'
+  - '6'
+  - '"'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - +
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - /
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
-  - $$mdi:page-previous-outline$$
-  - $$mdi:page-next-outline$$
-  - $$mdi:mouse-scroll-wheel$$
+  - {type: held}
+  - '-'
+  - ':'
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ',', h: PERIOD}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ARROW:
+  - $$mdi:keyboard-esc$$
+  - '&mkp MB4'
+  - $$mdi:arrow-up-bold$$
   - '&mkp MB5'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:format-vertical-align-top$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:pan-up$$
-  - $$mdi:pan-down$$
-  - '&mkp MB4'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:format-vertical-align-bottom$$
-  - $$mdi:arrow-left-bold$$
+  - Gui+$$mdi:arrow-left-bold$$
+  - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
+  - AltGr+$$mdi:arrow-right-bold$$
+  - Gui+$$mdi:arrow-right-bold$$
+  - HOME
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
+  - END
+  - Ctl+Sft+$$mdi:keyboard-tab$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:skip-next-outline$$
+  - $$mdi:apple-keyboard-shift$$
+  - Gui+Sft+$$mdi:arrow-left-bold$$
   - {t: ▽, type: trans}
+  - Gui+Sft+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - Alt+Gui+Ctl+$$mdi:arrow-left-bold$$
+  - Alt+Gui+$$mdi:arrow-left-bold$$
+  - Alt+Gui+F
+  - Gui+AltGr+$$mdi:arrow-right-bold$$
+  - AltGr+Ctl+Gui+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  MOUSE:
+  - {t: Q, h: '$$mdi:keyboard-esc$$'}
+  - W
+  - {t: E, h: SCROLL}
+  - R
+  - {t: T, h: CONFIG}
+  - Y
+  - U
+  - {t: I, h: SCROLL}
+  - O
+  - $$mdi:backspace-reverse-outline$$
+  - A
+  - S
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - F
+  - G
+  - H
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:mouse-right-click-outline$$
+  - '-'
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
+  - B
+  - N
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: /, h: '0x89'}
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-tab$$', h: LEFT WIN}
+  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
+  - {type: held}
+  - $$mdi:keyboard-tab-reverse$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:keyboard-esc$$', h: +}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SCROLL:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -89,155 +255,82 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:arrow-down-bold$$
-  - {t: ▽, type: trans}
-  - Gui+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - Gui+$$mdi:arrow-up-bold$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Number Layer:
   - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - '='
-  - F1
-  - F2
-  - F7
-  - F10
-  - $$mdi:apple-keyboard-shift$$
-  - '*'
-  - {t: '4', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '5', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '6', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '-', h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-command$$
-  - /
-  - '1'
-  - '2'
-  - '3'
-  - +
-  - $$mdi:mouse-right-click-outline$$
-  - ''
-  - $$mdi:arrow-down-bold$$
-  - ''
-  - $$mdi:apple-keyboard-option$$
-  - {t: ▽, type: trans}
-  - .
-  - '0'
-  - $$mdi:arrow-up-bold$$
-  - {t: LANG2, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LANG1
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:skip-previous-outline$$
-  - $$mdi:skip-next-outline$$
-  - F12
+  - {t: ▽, type: trans}
+  - Gui+$$mdi:arrow-left-bold$$
+  - Gui+$$mdi:arrow-down-bold$$
+  - Gui+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-control$$
+  - Sft+Gui+S
+  - $$mdi:arrow-up-bold$$
+  - Gui+D
+  - Alt+Ctl+$$mdi:backspace-reverse-outline$$
+  - Ctl+PgUp
+  - Ctl+PgDn
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  Mark Layer:
-  - Sft+Gui+4
-  - F4
-  - (
-  - )
-  - ''
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '&emoji'
-  - F5
-  - '['
-  - ']'
-  - ''
-  - '`'
-  - _
-  - ''''
-  - '"'
-  - {t: \, type: held}
-  - KP NUMLOCK
-  - F11
-  - '{'
-  - '}'
-  - ''
-  - '|'
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - {t: ▽, type: trans}
-  - $$mdi:keyboard-space$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Device Layer:
-  - ''
-  - ''
-  - ''
-  - ''
+  CONFIG:
+  - BT CLR ALL
   - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:progress-download$$', type: held}
-  - BT CLR ALL
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:lock-open-variant-outline$$
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:progress-download$$
   - $$mdi:progress-download$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -245,3 +338,25 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [9, 19]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [34, 35]
+  k: {t: Ctl+PgUp, h: MOUSE}
+- p: [36, 37]
+  k: Ctl+PgDn
+- p: [16, 17]
+  k: $$mdi:mouse-left-click-outline$$
+- p: [17, 18]
+  k: $$mdi:mouse-right-click-outline$$
+- p: [16, 18]
+  k: $$mdi:mouse-scroll-wheel$$
+- p: [11, 12]
+  k: $$mdi:keyboard-esc$$
+- p: [12, 13]
+  k: $$mdi:keyboard-tab$$
