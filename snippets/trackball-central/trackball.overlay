@@ -1,4 +1,7 @@
+#include <scroll-snap.dtsi>
+#include <input/processors.dtsi>
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
+
 / {
     chosen {
         zmk,kscan = &kscan1;
@@ -48,14 +51,15 @@
     status = "okay";
     device = <&trackball_central>;
     input-processors = 
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_inertia>; // 追加
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        //<&zip_inertia>; // 追加
 
     scroller {
         layers = <5>;  // 2->5
         input-processors = 
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_scaler 1 16>,
-            <&zip_inertia>; // 追加
+            <&zip_scroll_snap>;
+            // <&zip_inertia>; // 追加
     };
 };
