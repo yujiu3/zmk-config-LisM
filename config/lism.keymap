@@ -158,7 +158,7 @@
 &kp A             &kp S             &kp D         &kp F           &kp G                                       &kp H        &kp J            &kp K            &kp L                   &kp MINUS
 &mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &mt LCTRL C   &mt LEFT_ALT V  &kp B                                       &kp N        &mt RIGHT_ALT M  &mt RCTRL COMMA  &mt RIGHT_SHIFT PERIOD  &mt JP_YEN SLASH
 &kp LCTRL         &mt LEFT_WIN TAB  &kp LEFT_ALT  &msc SCRL_UP    &lt 4 SPACE  &lt 2 CAPS      &lt 5 BACKSPACE  &lt 1 ENTER  &trans           &trans           &trans                  &mt JP_TILDE ESCAPE
-                                &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_RIGHT              &trans &trans &trans
+                                    &trans        &msc SCRL_DOWN  &trans                       &trans &trans &trans
             >;
 
             // sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
