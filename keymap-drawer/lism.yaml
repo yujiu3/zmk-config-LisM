@@ -43,9 +43,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-esc$$', h: +}
-  - $$mdi:pan-left$$
+  - {t: ▽, type: trans}
   - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

@@ -60,12 +60,6 @@
 <svg id="mdi:pan-down">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-pan-down" viewBox="0 0 24 24"><path d="M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M8,17L12,21.5L16,17H8Z" /></svg>
 </svg>
-<svg id="mdi:pan-left">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-pan-left" viewBox="0 0 24 24"><path d="M7,8L2.5,12L7,16V8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z" /></svg>
-</svg>
-<svg id="mdi:pan-right">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-pan-right" viewBox="0 0 24 24"><path d="M17,8V16L21.5,12L17,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z" /></svg>
-</svg>
 <svg id="mdi:pan-up">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-pan-up" viewBox="0 0 24 24"><path d="M12,2.5L8,7H16L12,2.5M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z" /></svg>
 </svg>
@@ -410,17 +404,17 @@ path.combo { stroke: #7f7f7f; }
 <use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:keyboard-esc"/>
 <text x="0" y="24" class="key hold">+</text>
 </g>
-<g transform="translate(146, 238)" class="key keypos-42">
-<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
-<use href="#mdi:pan-left" xlink:href="#mdi:pan-left" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:pan-left"/>
+<g transform="translate(146, 238)" class="key trans keypos-42">
+<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(196, 238)" class="key keypos-43">
 <rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
 <use href="#mdi:pan-down" xlink:href="#mdi:pan-down" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:pan-down"/>
 </g>
-<g transform="translate(246, 238)" class="key keypos-44">
-<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key"/>
-<use href="#mdi:pan-right" xlink:href="#mdi:pan-right" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:pan-right"/>
+<g transform="translate(246, 238)" class="key trans keypos-44">
+<rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(482, 238)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-20" y="-12" width="41" height="24" class="key trans"/>
